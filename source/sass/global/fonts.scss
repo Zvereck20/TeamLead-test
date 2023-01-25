@@ -1,0 +1,71 @@
+/* Fonts */
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src:
+    url("../fonts/Roboto-Light.woff2") format("woff2"),
+    url("../fonts/Roboto-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url("../fonts/PTSerif-Regular.woff2") format("woff2"),
+    url("../fonts/PTSerif-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Serif";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url("../fonts/PTSerif-Bold.woff2") format("woff2"),
+    url("../fonts/PTSerif-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Yeseva One";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url("../fonts/YesevaOne-Regular.woff2") format("woff2"),
+    url("../fonts/YesevaOne-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url("../fonts/Merriweather-Regular.woff2") format("woff2"),
+    url("../fonts/Merriweather-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url("../fonts/Merriweather-Bold.woff2") format("woff2"),
+    url("../fonts/Merriweather-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src:
+    url("../fonts/Merriweather-Black.woff2") format("woff2"),
+    url("../fonts/Merriweather-Black.woff") format("woff");
+}

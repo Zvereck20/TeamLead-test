@@ -1,0 +1,250 @@
+.page {
+  height: 100%;
+}
+
+.body {
+  min-height: 100%;
+  font-family: "PT Serif", "Arial", serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  margin: 0;
+  padding: 0;
+  background-color: $header-background;
+  color: $main-color;
+  overflow-x: hidden;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    line-height: 23px;
+  }
+
+  @media (min-width: $descktop-width) {
+    font-size: 24px;
+  }
+}
+
+.body-lock {
+  width: 100%;
+  overflow-y: scroll;
+  position: fixed;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.button {
+  margin: 0 auto;
+  text-decoration: none;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  width: 189px;
+  height: 41px;
+  font-family: "Merriweather", "Arial", serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $btn-color;
+  background-color: $btn-background;
+  border: none;
+  border-radius: 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition-duration: 0.3s;
+
+  @media (min-width: $tablet-width) {
+    width: 208px;
+    height: 45px;
+    font-size: 17px;
+    line-height: 21px;
+  }
+
+  @media (min-width: $descktop-width) {
+    width: 229px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  &--big {
+    width: 200px;
+    height: 44px;
+
+    @media (min-width: $tablet-width) {
+      width: 220px;
+      height: 48px;
+    }
+
+    @media (min-width: $descktop-width) {
+      width: 242px;
+      height: 53px;
+    }
+  }
+
+  &--excretion {
+    color: $btn-active-color;
+    background: $btn-active-background;
+
+    &:hover {
+      transform: scale(1.1, 1.1);
+    }
+  }
+
+  &:hover {
+    color: $btn-active-color;
+    background: radial-gradient(50% 50% at 50% 50%, #FFC700 0%, #FFC700 100%);
+  }
+
+  &--white {
+    color: $main-color;
+    background-color: initial;
+    border: 1px solid $main-color;
+    border-radius: 50px;
+
+    &:hover {
+      transform: scale(1.1, 1.1);
+      color: $main-color;
+    }
+  }
+
+  &--call {
+    width: 290px;
+    height: 92px;
+    padding: 30px 20px 24px 62px;
+    font-family: "Roboto", "Arial", serif;
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    text-align: inherit;
+    color: $main-color;
+    background-color: $calling-color;
+    border-radius: 5px;
+    text-transform: none;
+    position: relative;
+    z-index: 5;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 29px;
+      height: 28px;
+      background-image: url("../img/call.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+      top: 35px;
+      left: 15px;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 319px;
+      height: 101px;
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    @media (min-width: $descktop-width) {
+      width: 351px;
+      height: 111px;
+      font-size: 21px;
+
+      &::before {
+        width: 32px;
+        height: 32px;
+        top: 43px;
+        left: 15px;
+      }
+    }
+  }
+}
+
+.block-heading {
+  margin: 0;
+  font-family: "PT Serif", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: $main-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 23px;
+    line-height: 29px;
+  }
+
+  @media (min-width: $descktop-width) {
+    font-size: 24px;
+  }
+}
+
+.container {
+  min-width: 260px;
+  margin: 0 auto;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    max-width: 768px;
+  }
+
+  &--background {
+    padding-top: 18px;
+    height: 92.5vh;
+    min-height: 568px;
+    background-image: url("../img/block-bc.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &--design {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 165px;
+      height: 165px;
+      background-image: url("../img/lightning_3.png");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      top: 407px;
+      right: -39px
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 165px;
+      height: 165px;
+      background-image: url("../img/lightning.png");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      left: -41px;
+      top: 338px;
+      transform: rotate(-22deg);
+    }
+  }
+}
