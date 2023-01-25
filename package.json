@@ -1,7 +1,7 @@
 {
-  "name": "LevelUp",
+  "name": "tel.27",
   "private": true,
-  "description": "LevelUp. Продукт для повышения потенции.",
+  "description": "Сервисный центр Dr. Mobile",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.0.2",

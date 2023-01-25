@@ -14,8 +14,8 @@
   align-content: start;
   margin: 0;
   padding: 0;
-  background-color: $header-background;
-  color: $main-color;
+  background-color: $main-color;
+  color: $text-color;
   overflow-x: hidden;
   position: relative;
 
@@ -84,119 +84,27 @@
     height: 50px;
     font-size: 20px;
   }
-
-  &--big {
-    width: 200px;
-    height: 44px;
-
-    @media (min-width: $tablet-width) {
-      width: 220px;
-      height: 48px;
-    }
-
-    @media (min-width: $descktop-width) {
-      width: 242px;
-      height: 53px;
-    }
-  }
-
-  &--excretion {
-    color: $btn-active-color;
-    background: $btn-active-background;
-
-    &:hover {
-      transform: scale(1.1, 1.1);
-    }
-  }
-
-  &:hover {
-    color: $btn-active-color;
-    background: radial-gradient(50% 50% at 50% 50%, #FFC700 0%, #FFC700 100%);
-  }
-
-  &--white {
-    color: $main-color;
-    background-color: initial;
-    border: 1px solid $main-color;
-    border-radius: 50px;
-
-    &:hover {
-      transform: scale(1.1, 1.1);
-      color: $main-color;
-    }
-  }
-
-  &--call {
-    width: 290px;
-    height: 92px;
-    padding: 30px 20px 24px 62px;
-    font-family: "Roboto", "Arial", serif;
-    font-weight: 900;
-    font-size: 15px;
-    line-height: 18px;
-    letter-spacing: 0.05em;
-    text-align: inherit;
-    color: $main-color;
-    background-color: $calling-color;
-    border-radius: 5px;
-    text-transform: none;
-    position: relative;
-    z-index: 5;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 29px;
-      height: 28px;
-      background-image: url("../img/call.svg");
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-size: cover;
-      top: 35px;
-      left: 15px;
-    }
-
-    @media (min-width: $tablet-width) {
-      width: 319px;
-      height: 101px;
-      font-size: 18px;
-      line-height: 21px;
-    }
-
-    @media (min-width: $descktop-width) {
-      width: 351px;
-      height: 111px;
-      font-size: 21px;
-
-      &::before {
-        width: 32px;
-        height: 32px;
-        top: 43px;
-        left: 15px;
-      }
-    }
-  }
 }
 
-.block-heading {
-  margin: 0;
-  font-family: "PT Serif", "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 26px;
-  text-align: center;
-  letter-spacing: 0.05em;
-  color: $main-color;
+// .block-heading {
+//   margin: 0;
+//   font-family: "PT Serif", "Arial", sans-serif;
+//   font-weight: 400;
+//   font-size: 20px;
+//   line-height: 26px;
+//   text-align: center;
+//   letter-spacing: 0.05em;
+//   color: $main-color;
 
-  @media (min-width: $tablet-width) {
-    font-size: 23px;
-    line-height: 29px;
-  }
+//   @media (min-width: $tablet-width) {
+//     font-size: 23px;
+//     line-height: 29px;
+//   }
 
-  @media (min-width: $descktop-width) {
-    font-size: 24px;
-  }
-}
+//   @media (min-width: $descktop-width) {
+//     font-size: 24px;
+//   }
+// }
 
 .container {
   min-width: 260px;
