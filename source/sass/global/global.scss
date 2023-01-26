@@ -8,14 +8,13 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 20px;
-  letter-spacing: 0.05em;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
   margin: 0;
   padding: 0;
   background-color: $main-color;
-  color: $text-color;
+  color: $main-black;
   overflow-x: hidden;
   position: relative;
 
@@ -27,12 +26,24 @@
   @media (min-width: $descktop-width) {
     font-size: 24px;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/11.png");
+    background-repeat: repeat;
+    background-size: contain;
+    top: 0;
+    left: 0;
+    opacity: 0.2;
+  }
 }
 
-.body-lock {
-  width: 100%;
-  overflow-y: scroll;
-  position: fixed;
+main {
+  min-width: 0;
+  position: relative;
 }
 
 .visually-hidden {
@@ -52,20 +63,18 @@
   margin: 0 auto;
   text-decoration: none;
   display: flex;
-  box-sizing: border-box;
   justify-content: center;
   align-items: center;
   width: 189px;
   height: 41px;
-  font-family: "Merriweather", "Arial", serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: $btn-color;
-  background-color: $btn-background;
+  color: $btn-text;
+  background-color: $btn-color;
   border: none;
   border-radius: 20px;
   box-sizing: border-box;
@@ -84,75 +93,28 @@
     height: 50px;
     font-size: 20px;
   }
+
+  &:hover,
+  &:focus {
+    color: $main-black;
+    border: 2px solid $excretion-color;
+    background-color: $main-color;
+  }
 }
-
-// .block-heading {
-//   margin: 0;
-//   font-family: "PT Serif", "Arial", sans-serif;
-//   font-weight: 400;
-//   font-size: 20px;
-//   line-height: 26px;
-//   text-align: center;
-//   letter-spacing: 0.05em;
-//   color: $main-color;
-
-//   @media (min-width: $tablet-width) {
-//     font-size: 23px;
-//     line-height: 29px;
-//   }
-
-//   @media (min-width: $descktop-width) {
-//     font-size: 24px;
-//   }
-// }
 
 .container {
   min-width: 260px;
+  padding: 0 15px;
   margin: 0 auto;
   position: relative;
 
   @media (min-width: $tablet-width) {
-    max-width: 768px;
+
+    padding: 0 25px;
   }
 
-  &--background {
-    padding-top: 18px;
-    height: 92.5vh;
-    min-height: 568px;
-    background-image: url("../img/block-bc.png");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
-    overflow: hidden;
-
-    display: flex;
-    flex-direction: column;
-  }
-
-  &--design {
-    &::before {
-      content: "";
-      position: absolute;
-      width: 165px;
-      height: 165px;
-      background-image: url("../img/lightning_3.png");
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      top: 407px;
-      right: -39px
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 165px;
-      height: 165px;
-      background-image: url("../img/lightning.png");
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      left: -41px;
-      top: 338px;
-      transform: rotate(-22deg);
-    }
+  @media (min-width: $descktop-width) {
+    max-width: 1350px;
+    padding: 0 45px;
   }
 }

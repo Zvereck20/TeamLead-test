@@ -1,0 +1,130 @@
+.special {
+  padding-top: 50px;
+
+  &__heading {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    font-size: 30px;
+    text-align: center;
+    line-height: 30px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 35px;
+      line-height: 35px;
+    }
+
+    @media (min-width: $descktop-width) {
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
+
+  &__timer {
+    width: 100%;
+    padding: 10px 0;
+    height: auto;
+    border: 2px solid $excretion-color;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+
+    @media (min-width: $tablet-width) {
+      font-size: 25px;
+    }
+
+    @media (min-width: $descktop-width) {
+      font-size: 30px;
+    }
+
+    &-title {
+      margin: 0;
+      padding: 0;
+      font-family: "Roboto", "Arial", serif;
+      font-size: 20px;
+      text-align: center;
+
+      @media (min-width: $tablet-width) {
+        font-size: 25px;
+      }
+
+      @media (min-width: $descktop-width) {
+        font-size: 30px;
+      }
+    }
+
+    &-wrap {
+      margin-top: 15px;
+      text-align: center;
+      color: $timer-color;
+    }
+  }
+
+  &__img {
+    padding: 30px 0;
+    text-align: center;
+
+    img {
+      width: 203px;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  &__price {
+    padding-bottom: 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+
+    &-old {
+      color: $btn-color;
+      text-decoration: line-through;
+    }
+
+    &-new {
+      position: relative;
+      display: inline-block;
+      font-size: 30px;
+      font-weight: 700;
+      text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+
+      /* Clip Background Image */
+
+      background: url('https://i.ibb.co/RDTnNrT/animated-text-fill.png') repeat-y;
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      /* Animate Background Image */
+
+      -webkit-text-fill-color: transparent;
+      -webkit-animation: aitf 50s linear;
+
+      /* Activate hardware acceleration for smoother animations */
+
+      -webkit-transform: translate3d(0, 0, 0);
+      -webkit-backface-visibility: hidden;
+
+      @media (min-width: $tablet-width) {
+        font-size: 35px;
+      }
+
+      @media (min-width: $descktop-width) {
+        font-size: 40px;
+        line-height: 40px;
+      }
+    }
+  }
+
+  /* Animate Background Image */
+
+  @-webkit-keyframes aitf {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+}

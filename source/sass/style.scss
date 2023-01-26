@@ -4,4 +4,17 @@
 @import "global/variables.scss";
 @import "global/global.scss";
 
+// Swiper
+
+@import "swiper/swiper-vars.scss";
+@import "swiper/swiper.scss";
+@import "swiper/swiper-pagination.scss";
+
 // Blocks
+
+@import "promo.scss";
+@import "composition.scss";
+@import "reviews.scss";
+@import "description.scss";
+@import "special.scss";
+@import "form.scss";

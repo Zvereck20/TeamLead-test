@@ -1,0 +1,124 @@
+.reviews {
+  padding-top: 30px;
+  // min-width: 0;
+  // position: relative;
+
+  .swiper {
+    overflow: hidden;
+    position: relative;
+    padding-left: 15px;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 25px;
+    }
+
+    @media (min-width: $descktop-width) {
+      padding-left: 45px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 1441px) {
+      max-width: 1440px;
+      padding-left: 95px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
+    }
+
+
+    h3 {
+      width: 60%;
+      margin: 0;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 26px;
+      text-align: center;
+      letter-spacing: 0.05em;
+      color: $main-black;
+
+      @media (min-width: $tablet-width) {
+        width: 100%;
+        font-size: 25px;
+        line-height: 29px;
+      }
+
+      @media (min-width: $descktop-width) {
+        font-size: 30px;
+      }
+    }
+
+    p {
+      width: 90%;
+      margin: 0;
+      padding-top: 10px;
+      font-family: "Roboto", "Arial", serif;
+      font-size: 15px;
+
+      @media (min-width: $tablet-width) {
+        font-size: 20px;
+        padding-top: 0;
+        padding-left: 10px;
+      }
+
+      @media (min-width: $descktop-width) {
+        font-size: 25px;
+      }
+    }
+  }
+
+  &__img {
+    img {
+      width: 100px;
+      height: auto;
+      display: block;
+      border-radius: 20%;
+
+      @media (min-width: $tablet-width) {
+        width: 200px;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      grid-row: 1/3;
+    }
+  }
+
+  &__btn {
+    display: none;
+
+    @media (min-width: $descktop-width) {
+      position: absolute;
+      width: 95%;
+      top: 130px;
+      left: 19px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 5;
+      transition: 3s;
+    }
+
+    .swiper-button-next {
+      transform: rotate(180deg);
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      cursor: pointer;
+    }
+
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+      opacity: 0.5;
+    }
+  }
+}

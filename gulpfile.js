@@ -103,6 +103,7 @@ const copy = (done) => {
     "source/img/**/*.{jpg,png,svg}",
     "source/css/normalize.css",
     "source/js/**",
+    "source/video/**",
     ], {
       base: "source"
     })
